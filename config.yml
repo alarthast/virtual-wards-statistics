@@ -1,0 +1,16 @@
+VIRTUAL_WARDS_STATS_HOMEPAGE: "https://www.england.nhs.uk/statistics/statistical-work-areas/virtual-ward/"
+
+DATA_FILENAME: "virtual_ward_statistics.csv"
+COLUMN_NAMES:
+  Region : region
+  Region Code : region_code
+  ICB code : icb_code
+  Name : name
+  Virtual Ward Capacity : capacity
+  Virtual Ward Capacity per 100,000 GP registered population aged 16 years and over : capacity_per_population
+  GP registered population aged 16 and over : population
+  Patients in a Virtual Ward : num_ward_patients
+  Occupancy % : occupancy
+
+GEOJSON_FILENAME: "Integrated_Care_Boards_April_2023_EN_BGC_-5820614070354969176.geojson"
+ICB_CODE_LOOKUP_FILENAME: "ICB_JUL_2022_EN_NC.xlsx"
