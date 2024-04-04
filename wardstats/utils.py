@@ -1,7 +1,7 @@
 import pathlib
 import os
 import yaml
-from datetime import datetime
+import datetime
 
 
 def get_root_dir():
