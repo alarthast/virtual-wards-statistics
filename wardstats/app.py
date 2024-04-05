@@ -89,7 +89,7 @@ app.layout = html.Div(
                             children=[
                                 html.P(
                                     [
-                                        "This is a mini-dashboard created by Siu Ying Wong as part of a job application. The dashboard is kept simplistic as its main purpose is for demonstrating skills and development potential in engineering ETL pipelines and building visualisations. ",
+                                        "This is a dashboard created by Siu Ying Wong as part of a job application. The dashboard is kept simplistic as its main purpose is for demonstrating skills in engineering ETL pipelines, building visualisations and handling healthcare data. ",
                                         "The source code for constructing the pipeline and dashboard can be found on ",
                                         html.A(
                                             "GitHub",
