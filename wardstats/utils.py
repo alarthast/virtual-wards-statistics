@@ -1,7 +1,9 @@
 import pathlib
-import os
 import yaml
 import datetime
+import pandas as pd
+import geopandas as gpd
+from wardstats.config import STATIC, DATE
 
 
 def get_root_dir():
@@ -69,3 +71,42 @@ def generate_raw_filename(date: datetime.datetime):
         str: The filename of the raw excel file.
     """
     return date.strftime("%Y_%m") + "_Monthly_Virtual_Ward.xlsx"
+
+
+def get_geojson_dataframe(config):
+    filename = config["GEOJSON_FILENAME"]
+    filepath = get_data_path(STATIC, filename)
+    return gpd.read_file(filepath).to_crs(epsg=4326)
+
+
+def get_icb_code_lookup(config):
+    filename = config["ICB_CODE_LOOKUP_FILENAME"]
+    filepath = get_data_path(STATIC, filename)
+    df = pd.read_excel(filepath)
+    df.set_index("ICB22CD", inplace=True)
+    lookup = pd.Series(df["ICB22CDH"]).to_dict()
+    return lookup
+
+
+def get_icb_boundaries(config):
+    lookup = get_icb_code_lookup(config)
+    gdf = get_geojson_dataframe(config)
+    gdf = gdf.replace({"ICB22CD": lookup})
+    boundaries = eval(gdf.to_json())
+    return boundaries
+
+
+def get_icb_name_lookup(boundaries: dict):
+    df = gpd.GeoDataFrame.from_features(boundaries)[["ICB22CD", "ICB22NM"]].copy()
+    df.set_index("ICB22CD", inplace=True)
+    lookup = pd.Series(df["ICB22NM"]).to_dict()
+    return lookup
+
+
+def filter_date(df, date=None):
+    if date is None:
+        date = df[DATE].max()
+    filtered = df[df[DATE] == date].copy()
+    if len(filtered) == 0:
+        raise ValueError(f"No data available for {date}, max is {df[DATE].max()}")
+    return filtered

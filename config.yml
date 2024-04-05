@@ -15,6 +15,18 @@ COLUMN_NAMES:
 GEOJSON_FILENAME: "ICB_JUL_2022_EN_BUC_V3_5138400207907180607.geojson"
 ICB_CODE_LOOKUP_FILENAME: "ICB_JUL_2022_EN_NC.xlsx"
 
-UK_CENTRE:
-  lat: 54.8
-  lon: -4.6
+MAP_CENTRE:
+  lat: 53
+  lon: -2
+
+DROPDOWN_OPTIONS:
+  capacity: "Virtual Ward Capacity (see note 1)"
+  capacity_per_population: "Virtual Ward Capacity per 100,000 GP registered population aged 16 years and over (see note 2)"
+  num_ward_patients: "Patients in a Virtual Ward (see notes 1 and 3)"
+  occupancy: "Occupancy % (see note 4)"
+
+FORMATTERS:
+  capacity: ":.0f"
+  capacity_per_population: ".1f"
+  num_ward_patients: ".0f"
+  occupancy: ".1%"
