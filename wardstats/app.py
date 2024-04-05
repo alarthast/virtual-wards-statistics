@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html, Input, Output, callback, ctx, no_update
+from dash import Dash, dcc, html, Input, Output, callback, no_update
 import os
 import numpy as np
 import pandas as pd
@@ -11,7 +11,6 @@ from wardstats.utils import (
 )
 from wardstats.config import (
     PROCESSED,
-    OCCUPANCY,
     ICB_CODE,
     ICB_NAME,
     CAPACITY_PER_POPULATION,
@@ -209,4 +208,4 @@ def update_icb_shown(clickData, col):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
