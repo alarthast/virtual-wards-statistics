@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+
+}
+
+h1 {
+    color: #003087;
+    text-align: center;
+}
+
+h2 {
+    color: #005EB8;
+}
+
+h3 {
+    color: #0072CE;
+}
+div {
+    font-family: sans-serif;
+  }
+  .container {
+    display: flex;
+  }
+  .left, .right {
+    flex: 1;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }

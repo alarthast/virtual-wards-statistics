@@ -1,0 +1,26 @@
+# Data directories
+RAW = "raw"
+STAGING = "staging"
+PROCESSED = "processed"
+STATIC = "static"
+# Data columns
+REGION = "region"
+REGION_CODE = "region_code"
+ICB_CODE = "icb_code"
+NAME = "name"
+CAPACITY = "capacity"
+CAPACITY_PER_POPULATION = "capacity_per_population"
+POPULATION = "population"
+NUM_WARD_PATIENTS = "num_ward_patients"
+OCCUPANCY = "occupancy"
+SUPPRESSED = "suppressed"
+DATE = "date"
+ICB_NAME = "icb_name"
+
+# Component IDs
+HEADER = "HEADER"
+DROPDOWN = "DROPDOWN"
+SLIDER = "SLIDER"
+MAP = "MAP"
+TIMESERIES = "TIMESERIES"
+FORMATTERS = "FORMATTERS"
