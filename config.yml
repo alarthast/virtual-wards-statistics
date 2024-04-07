@@ -1,4 +1,7 @@
-VIRTUAL_WARDS_STATS_HOMEPAGE: "https://www.england.nhs.uk/statistics/statistical-work-areas/virtual-ward/"
+VIRTUAL_WARDS_STATS_HOMEPAGE_URL: "https://www.england.nhs.uk/statistics/statistical-work-areas/virtual-ward/"
+VIRTUAL_WARDS_INFO_URL: "https://www.england.nhs.uk/virtual-wards/"
+GP_POPULATION_URL: "https://digital.nhs.uk/data-and-information/publications/statistical/patients-registered-at-a-gp-practice"
+GITHUB_URL: "https://github.com/alarthast/virtual-wards-statistics/tree/main"
 
 DATA_FILENAME: "virtual_ward_statistics.csv"
 COLUMN_NAMES:
@@ -15,6 +18,8 @@ COLUMN_NAMES:
 GEOJSON_FILENAME: "ICB_JUL_2022_EN_BUC_V3_5138400207907180607.geojson"
 ICB_CODE_LOOKUP_FILENAME: "ICB_JUL_2022_EN_NC.xlsx"
 
+HEADER: "NHS Virtual Wards Statistics"
+
 MAP_CENTRE:
   lat: 53
   lon: -2
@@ -30,3 +35,10 @@ FORMATTERS:
   capacity_per_population: ".1f"
   num_ward_patients: ".0f"
   occupancy: ".1%"
+
+NHS_COLOURS:
+  BLUE: "#005EB8"
+  DARK_BLUE: "#003087"
+  BRIGHT_BLUE: "#0072CE"
+  LIGHT_BLUE: "#41B6E6"
+  AQUA_BLUE: "#00A9CE"

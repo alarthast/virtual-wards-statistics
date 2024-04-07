@@ -72,6 +72,9 @@ class ExcelFileProcessor:
         return df
 
     def write_clean_file_to_staging(self):
+        """
+        Writes the cleaned dataframe to the staging directory as a csv file.
+        """
         df = self.read_in_raw_file()
         df = self.transform_dataframe(df)
         df.to_csv(get_data_path(STAGING, self.staging_filename), index=False)

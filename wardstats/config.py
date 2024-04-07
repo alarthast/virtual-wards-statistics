@@ -16,3 +16,11 @@ OCCUPANCY = "occupancy"
 SUPPRESSED = "suppressed"
 DATE = "date"
 ICB_NAME = "icb_name"
+
+# Component IDs
+HEADER = "HEADER"
+DROPDOWN = "DROPDOWN"
+SLIDER = "SLIDER"
+MAP = "MAP"
+TIMESERIES = "TIMESERIES"
+FORMATTERS = "FORMATTERS"
