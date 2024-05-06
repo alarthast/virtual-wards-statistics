@@ -217,7 +217,7 @@ def get_text_div():
         children=[
             html.P(
                 [
-                    "This is a dashboard created by Siu Ying Wong as part of a job application. The dashboard is kept simplistic as its main purpose is for demonstrating skills in engineering ETL pipelines, building visualisations and handling healthcare data. ",
+                    "This is a dashboard created by Siu Ying Wong as part of a job application. The dashboard is kept simplistic as its main purpose is for demonstrating Python programming skills in engineering ETL pipelines, building web applications and handling healthcare data. ",
                     "The source code for constructing the pipeline and dashboard can be found on ",
                     html.A(
                         "GitHub",
